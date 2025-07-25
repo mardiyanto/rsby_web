@@ -1,0 +1,272 @@
+INFO - 2025-07-16 05:59:00 --> Active slides data: [{"id_slide":"1","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590042_d0953f6276e2d460d4f6.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-14 20:23:10","updated_at":"2025-07-15 21:34:49"},{"id_slide":"2","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590060_1b80f6cee41da2e6a1b4.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-15 13:12:36","updated_at":"2025-07-15 21:34:52"}]
+DEBUG - 2025-07-16 05:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 05:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 05:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 05:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-16 06:17:16 --> Active slides data: [{"id_slide":"1","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590042_d0953f6276e2d460d4f6.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-14 20:23:10","updated_at":"2025-07-15 21:34:49"},{"id_slide":"2","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590060_1b80f6cee41da2e6a1b4.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-15 13:12:36","updated_at":"2025-07-15 21:34:52"}]
+DEBUG - 2025-07-16 06:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 06:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-16 06:59:43 --> mysqli_sql_exception: Table 'db_dokkes.faq' doesn't exist in D:\laragon\www\Biddokkes\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\Biddokkes\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\laragon\www\Biddokkes\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\laragon\www\Biddokkes\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\laragon\www\Biddokkes\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\laragon\www\Biddokkes\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\laragon\www\Biddokkes\app\Controllers\Dashboard.php(37): CodeIgniter\Model->countAllResults()
+#6 D:\laragon\www\Biddokkes\system\CodeIgniter.php(933): App\Controllers\Dashboard->admin()
+#7 D:\laragon\www\Biddokkes\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 D:\laragon\www\Biddokkes\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\Biddokkes\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\Biddokkes\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\laragon\www\Biddokkes\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-16 06:59:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_dokkes.faq' doesn't exist
+[Method: GET, Route: dashboard/admin]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `faq`', [], false)
+ 2 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Dashboard.php(37): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->admin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-16 06:59:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_dokkes.faq' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `faq`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `faq`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `faq`', [], false)
+ 4 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Dashboard.php(37): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-16 06:59:43 --> [Caused by] mysqli_sql_exception: Table 'db_dokkes.faq' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `faq`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `faq`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `faq`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `faq`', [], false)
+ 5 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Dashboard.php(37): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-16 07:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-16 07:01:39 --> Active slides data: [{"id_slide":"1","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590042_d0953f6276e2d460d4f6.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-14 20:23:10","updated_at":"2025-07-15 21:34:49"},{"id_slide":"2","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590060_1b80f6cee41da2e6a1b4.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-15 13:12:36","updated_at":"2025-07-15 21:34:52"}]
+INFO - 2025-07-16 07:01:42 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 07:01:51 --> Active slides data: [{"id_slide":"1","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590042_d0953f6276e2d460d4f6.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-14 20:23:10","updated_at":"2025-07-15 21:34:49"},{"id_slide":"2","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590060_1b80f6cee41da2e6a1b4.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-15 13:12:36","updated_at":"2025-07-15 21:34:52"}]
+INFO - 2025-07-16 07:02:16 --> Active slides data: [{"id_slide":"1","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590042_d0953f6276e2d460d4f6.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-14 20:23:10","updated_at":"2025-07-15 21:34:49"},{"id_slide":"2","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590060_1b80f6cee41da2e6a1b4.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-15 13:12:36","updated_at":"2025-07-15 21:34:52"}]
+INFO - 2025-07-16 07:10:41 --> Active slides data: [{"id_slide":"1","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590042_d0953f6276e2d460d4f6.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-14 20:23:10","updated_at":"2025-07-15 21:34:49"},{"id_slide":"2","judul":"BIDDOKKES POLDA","deskripsi":"Bidang Kedokteran dan Kesehatan Kepolisian Daerah Lampung","gambar":"1752590060_1b80f6cee41da2e6a1b4.jpg","link":"","urutan":"1","status":"aktif","created_at":"2025-07-15 13:12:36","updated_at":"2025-07-15 21:34:52"}]
+DEBUG - 2025-07-16 07:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-16 07:30:41 --> Frontend berita detail error: Call to undefined method App\Models\KategoriModel::getBeritaCountByKategori
+DEBUG - 2025-07-16 07:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-16 07:41:39 --> Frontend halaman 404: Halaman tidak ditemukan - Slug: profil
+ERROR - 2025-07-16 07:41:47 --> Frontend halaman 404: Halaman tidak ditemukan - Slug: profil
+ERROR - 2025-07-16 07:41:50 --> Frontend halaman 404: Halaman tidak ditemukan - Slug: sejarah
+ERROR - 2025-07-16 07:41:57 --> Frontend halaman 404: Halaman tidak ditemukan - Slug: fasilitas
+ERROR - 2025-07-16 07:42:10 --> Frontend halaman 404: Halaman tidak ditemukan - Slug: profil
+DEBUG - 2025-07-16 07:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:48:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 07:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-16 07:54:50 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 08:50:40 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 08:58:57 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+DEBUG - 2025-07-16 08:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-16 09:00:55 --> Frontend berita detail error: Call to undefined method App\Models\KategoriModel::getBeritaCountByKategori
+ERROR - 2025-07-16 09:07:23 --> Frontend berita detail error: Call to undefined method App\Models\KategoriModel::getBeritaCountByKategori
+ERROR - 2025-07-16 09:07:43 --> Frontend berita detail error: Call to undefined method App\Models\KategoriModel::getBeritaCountByKategori
+ERROR - 2025-07-16 09:10:30 --> Frontend berita detail error: Call to undefined method App\Models\KategoriModel::getBeritaCountByKategori
+ERROR - 2025-07-16 09:11:36 --> Frontend berita detail error: Call to undefined method App\Models\KategoriModel::getBeritaCountByKategori
+INFO - 2025-07-16 10:12:56 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 10:21:40 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+DEBUG - 2025-07-16 10:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-16 16:12:46 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:12:57 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:24:46 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:24:50 --> Download request - ID: 7, Data: {"id_download":"7","id_kategori_download":"3","judul":"bhjghg","deskripsi":"hffhgfghf fghf gf","download_count":"1","nama_file":"1752571658_1205c26e3ac87178958b.pdf","ukuran_file":"409021","tipe_file":"pdf","hits":"1","tanggal_upload":"2025-07-15","created_at":"2025-07-15 16:27:38","updated_at":"2025-07-15 20:20:14"}
+INFO - 2025-07-16 16:24:50 --> File found at: D:\laragon\www\Biddokkes\public\uploads/download/1752571658_1205c26e3ac87178958b.pdf
+INFO - 2025-07-16 16:25:05 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:25:08 --> Download request - ID: 3, Data: {"id_download":"3","id_kategori_download":"1","judul":"RESTRA","deskripsi":"FUNGSI DAN JABATAN","download_count":"3","nama_file":"1752499044_5b7b5fc16b1e2884c6e0.pdf","ukuran_file":"2082728","tipe_file":"pdf","hits":"13","tanggal_upload":"2025-07-14","created_at":"2025-07-14 20:17:24","updated_at":"2025-07-16 16:12:48"}
+INFO - 2025-07-16 16:25:08 --> File found at: D:\laragon\www\Biddokkes\public\uploads/download/1752499044_5b7b5fc16b1e2884c6e0.pdf
+INFO - 2025-07-16 16:25:22 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:25:25 --> Download request - ID: 7, Data: {"id_download":"7","id_kategori_download":"3","judul":"bhjghg","deskripsi":"hffhgfghf fghf gf","download_count":"2","nama_file":"1752571658_1205c26e3ac87178958b.pdf","ukuran_file":"409021","tipe_file":"pdf","hits":"2","tanggal_upload":"2025-07-15","created_at":"2025-07-15 16:27:38","updated_at":"2025-07-16 16:24:50"}
+INFO - 2025-07-16 16:25:25 --> File found at: D:\laragon\www\Biddokkes\public\uploads/download/1752571658_1205c26e3ac87178958b.pdf
+INFO - 2025-07-16 16:42:34 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:42:39 --> Download data: {"id_download":"3","id_kategori_download":"1","judul":"RESTRA","deskripsi":"FUNGSI DAN JABATAN","download_count":"4","nama_file":"1752499044_5b7b5fc16b1e2884c6e0.pdf","ukuran_file":"2082728","tipe_file":"pdf","hits":"14","tanggal_upload":"2025-07-14","created_at":"2025-07-14 20:17:24","updated_at":"2025-07-16 16:25:08"}
+INFO - 2025-07-16 16:42:39 --> Upload directory: D:\laragon\www\Biddokkes\public\uploads/download/
+INFO - 2025-07-16 16:42:39 --> File path: D:\laragon\www\Biddokkes\public\uploads/download/1752499044_5b7b5fc16b1e2884c6e0.pdf
+INFO - 2025-07-16 16:42:39 --> File size: 2082728 bytes
+INFO - 2025-07-16 16:42:49 --> Download data: {"id_download":"3","id_kategori_download":"1","judul":"RESTRA","deskripsi":"FUNGSI DAN JABATAN","download_count":"5","nama_file":"1752499044_5b7b5fc16b1e2884c6e0.pdf","ukuran_file":"2082728","tipe_file":"pdf","hits":"15","tanggal_upload":"2025-07-14","created_at":"2025-07-14 20:17:24","updated_at":"2025-07-16 16:42:39"}
+INFO - 2025-07-16 16:42:49 --> Upload directory: D:\laragon\www\Biddokkes\public\uploads/download/
+INFO - 2025-07-16 16:42:49 --> File path: D:\laragon\www\Biddokkes\public\uploads/download/1752499044_5b7b5fc16b1e2884c6e0.pdf
+INFO - 2025-07-16 16:42:49 --> File size: 2082728 bytes
+INFO - 2025-07-16 16:42:54 --> Download data: {"id_download":"7","id_kategori_download":"3","judul":"bhjghg","deskripsi":"hffhgfghf fghf gf","download_count":"3","nama_file":"1752571658_1205c26e3ac87178958b.pdf","ukuran_file":"409021","tipe_file":"pdf","hits":"3","tanggal_upload":"2025-07-15","created_at":"2025-07-15 16:27:38","updated_at":"2025-07-16 16:25:25"}
+INFO - 2025-07-16 16:42:54 --> Upload directory: D:\laragon\www\Biddokkes\public\uploads/download/
+INFO - 2025-07-16 16:42:54 --> File path: D:\laragon\www\Biddokkes\public\uploads/download/1752571658_1205c26e3ac87178958b.pdf
+INFO - 2025-07-16 16:42:54 --> File size: 409021 bytes
+INFO - 2025-07-16 16:43:18 --> Download data: {"id_download":"7","id_kategori_download":"3","judul":"bhjghg","deskripsi":"hffhgfghf fghf gf","download_count":"4","nama_file":"1752571658_1205c26e3ac87178958b.pdf","ukuran_file":"409021","tipe_file":"pdf","hits":"4","tanggal_upload":"2025-07-15","created_at":"2025-07-15 16:27:38","updated_at":"2025-07-16 16:42:54"}
+INFO - 2025-07-16 16:43:18 --> Upload directory: D:\laragon\www\Biddokkes\public\uploads/download/
+INFO - 2025-07-16 16:43:18 --> File path: D:\laragon\www\Biddokkes\public\uploads/download/1752571658_1205c26e3ac87178958b.pdf
+INFO - 2025-07-16 16:43:18 --> File size: 409021 bytes
+INFO - 2025-07-16 16:43:46 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:43:48 --> Download data: {"id_download":"7","id_kategori_download":"3","judul":"bhjghg","deskripsi":"hffhgfghf fghf gf","download_count":"5","nama_file":"1752571658_1205c26e3ac87178958b.pdf","ukuran_file":"409021","tipe_file":"pdf","hits":"5","tanggal_upload":"2025-07-15","created_at":"2025-07-15 16:27:38","updated_at":"2025-07-16 16:43:18"}
+INFO - 2025-07-16 16:43:48 --> Upload directory: D:\laragon\www\Biddokkes\public\uploads/download/
+INFO - 2025-07-16 16:43:48 --> File path: D:\laragon\www\Biddokkes\public\uploads/download/1752571658_1205c26e3ac87178958b.pdf
+INFO - 2025-07-16 16:43:48 --> File size: 409021 bytes
+INFO - 2025-07-16 16:53:34 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:53:37 --> Download data: {"id_download":"7","id_kategori_download":"3","judul":"bhjghg","deskripsi":"hffhgfghf fghf gf","download_count":"6","nama_file":"1752571658_1205c26e3ac87178958b.pdf","ukuran_file":"409021","tipe_file":"pdf","hits":"6","tanggal_upload":"2025-07-15","created_at":"2025-07-15 16:27:38","updated_at":"2025-07-16 16:43:48"}
+INFO - 2025-07-16 16:53:37 --> Upload directory: D:\laragon\www\Biddokkes\public\public/uploads/download/
+INFO - 2025-07-16 16:53:37 --> File path: D:\laragon\www\Biddokkes\public\public/uploads/download/1752571658_1205c26e3ac87178958b.pdf
+ERROR - 2025-07-16 16:53:37 --> Upload directory does not exist: D:\laragon\www\Biddokkes\public\public/uploads/download/
+INFO - 2025-07-16 16:53:37 --> Upload directory created: D:\laragon\www\Biddokkes\public\public/uploads/download/
+ERROR - 2025-07-16 16:53:37 --> File does not exist: D:\laragon\www\Biddokkes\public\public/uploads/download/1752571658_1205c26e3ac87178958b.pdf
+INFO - 2025-07-16 16:53:37 --> Files in upload directory: [".",".."]
+ERROR - 2025-07-16 16:53:37 --> Download file not found: File tidak ditemukan di server. Silakan hubungi administrator.
+INFO - 2025-07-16 16:53:55 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 16:53:59 --> Download data: {"id_download":"3","id_kategori_download":"1","judul":"RESTRA","deskripsi":"FUNGSI DAN JABATAN","download_count":"6","nama_file":"1752499044_5b7b5fc16b1e2884c6e0.pdf","ukuran_file":"2082728","tipe_file":"pdf","hits":"16","tanggal_upload":"2025-07-14","created_at":"2025-07-14 20:17:24","updated_at":"2025-07-16 16:42:49"}
+INFO - 2025-07-16 16:53:59 --> Upload directory: D:\laragon\www\Biddokkes\public\public/uploads/download/
+INFO - 2025-07-16 16:53:59 --> File path: D:\laragon\www\Biddokkes\public\public/uploads/download/1752499044_5b7b5fc16b1e2884c6e0.pdf
+ERROR - 2025-07-16 16:53:59 --> File does not exist: D:\laragon\www\Biddokkes\public\public/uploads/download/1752499044_5b7b5fc16b1e2884c6e0.pdf
+INFO - 2025-07-16 16:53:59 --> Files in upload directory: [".",".."]
+ERROR - 2025-07-16 16:53:59 --> Download file not found: File tidak ditemukan di server. Silakan hubungi administrator.
+INFO - 2025-07-16 16:56:58 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+DEBUG - 2025-07-16 17:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-16 17:03:54 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 17:03:58 --> Download data: {"id_download":"8","id_kategori_download":"5","judul":"bagian ren","deskripsi":"bagian ren","download_count":"0","nama_file":"1752660228_f9fadae62cdaddd2464c.pdf","ukuran_file":"607283","tipe_file":"pdf","hits":"0","tanggal_upload":"2025-07-16","created_at":"2025-07-16 17:03:48","updated_at":"2025-07-16 17:03:48"}
+INFO - 2025-07-16 17:03:58 --> Upload directory: D:\laragon\www\Biddokkes\public\public/uploads/download/
+INFO - 2025-07-16 17:03:58 --> File path: D:\laragon\www\Biddokkes\public\public/uploads/download/1752660228_f9fadae62cdaddd2464c.pdf
+INFO - 2025-07-16 17:03:58 --> File exists: Yes
+INFO - 2025-07-16 17:03:58 --> File size: 607283 bytes
+INFO - 2025-07-16 17:23:39 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 17:23:41 --> Download data: {"id_download":"3","id_kategori_download":"1","judul":"RESTRA","deskripsi":"FUNGSI DAN JABATAN","download_count":"6","nama_file":"1752499044_5b7b5fc16b1e2884c6e0.pdf","ukuran_file":"2082728","tipe_file":"pdf","hits":"16","tanggal_upload":"2025-07-14","created_at":"2025-07-14 20:17:24","updated_at":"2025-07-16 16:42:49"}
+INFO - 2025-07-16 17:23:41 --> Upload directory: D:\laragon\www\Biddokkes\public\public/uploads/download/
+INFO - 2025-07-16 17:23:41 --> File path: D:\laragon\www\Biddokkes\public\public/uploads/download/1752499044_5b7b5fc16b1e2884c6e0.pdf
+INFO - 2025-07-16 17:23:41 --> File exists: No
+ERROR - 2025-07-16 17:23:41 --> File does not exist: D:\laragon\www\Biddokkes\public\public/uploads/download/1752499044_5b7b5fc16b1e2884c6e0.pdf
+INFO - 2025-07-16 17:23:41 --> Files in upload directory: [".","..","1752660228_f9fadae62cdaddd2464c.pdf"]
+ERROR - 2025-07-16 17:23:41 --> Download file not found: File tidak ditemukan di server: 1752499044_5b7b5fc16b1e2884c6e0.pdf
+DEBUG - 2025-07-16 17:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-16 17:23:58 --> Backend download - File path: D:\laragon\www\Biddokkes\public\public/uploads/download/1752660228_f9fadae62cdaddd2464c.pdf
+INFO - 2025-07-16 17:23:58 --> Backend download - File exists: Yes
+DEBUG - 2025-07-16 17:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 17:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-16 17:31:38 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 17:31:41 --> Download data: {"id_download":"9","id_kategori_download":"1","judul":"RENTRA DAN FILE","deskripsi":"RENTRA DAN FILE","download_count":"0","nama_file":"1752661615_b10e3b41ac660218d232.pdf","ukuran_file":"2082728","tipe_file":"pdf","hits":"0","tanggal_upload":"2025-07-16","created_at":"2025-07-16 17:26:55","updated_at":"2025-07-16 17:26:55"}
+INFO - 2025-07-16 17:31:41 --> File found at: D:\laragon\www\Biddokkes\public\uploads/download/1752661615_b10e3b41ac660218d232.pdf
+INFO - 2025-07-16 17:31:41 --> File size: 2082728 bytes
+INFO - 2025-07-16 17:32:01 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 17:32:18 --> Download data: {"id_download":"9","id_kategori_download":"1","judul":"RENTRA DAN FILE","deskripsi":"RENTRA DAN FILE","download_count":"1","nama_file":"1752661615_b10e3b41ac660218d232.pdf","ukuran_file":"2082728","tipe_file":"pdf","hits":"1","tanggal_upload":"2025-07-16","created_at":"2025-07-16 17:26:55","updated_at":"2025-07-16 17:31:41"}
+INFO - 2025-07-16 17:32:18 --> File found at: D:\laragon\www\Biddokkes\public\uploads/download/1752661615_b10e3b41ac660218d232.pdf
+INFO - 2025-07-16 17:32:18 --> File size: 2082728 bytes
+INFO - 2025-07-16 17:32:25 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 17:36:08 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+DEBUG - 2025-07-16 18:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 18:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-16 18:55:50 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 20:44:04 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]
+INFO - 2025-07-16 20:48:10 --> Kategori data: [{"id_kategori_download":"1","nama_kategori_download":"Dokumen","created_at":"2025-07-14 10:23:44"},{"id_kategori_download":"3","nama_kategori_download":"PRODUK DOKKES","created_at":"2025-07-15 15:54:51"},{"id_kategori_download":"5","nama_kategori_download":"PRODUK REN","created_at":"2025-07-15 16:18:24"}]

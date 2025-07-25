@@ -1,0 +1,7 @@
+Folder ini berisi gambar-gambar untuk frontend:
+
+1. logo-polri.png - Logo Polri (60x60px)
+2. default-news.jpg - Gambar default untuk berita (800x400px)
+3. about-biddokkes.jpg - Gambar untuk halaman about (600x400px)
+
+Silakan tambahkan gambar-gambar tersebut sesuai dengan kebutuhan. 

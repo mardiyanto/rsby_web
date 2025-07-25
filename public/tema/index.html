@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Rumah Sakit Wisma Rini</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                        <a href="#" class="text-light me-4"><i class="fas fa-phone text-primary me-2"></i>+01234567890</a>
+                        <a href="#" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Mobile Topbar Start -->
+        <div class="mobile-topbar">
+            <span style="vertical-align:middle; color:#E53935; font-size:1.5em;">
+                <i class="fas fa-hospital"></i>
+            </span>
+            <span style="font-weight:bold; font-size:1.2em; margin-left:8px;">Rumah Sakit Wisma Rini</span>
+        </div>
+        <!-- Mobile Topbar End -->
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Mobile Dropdown Menu -->
+        <div class="mobile-dropdown" id="mobileDropdown">
+            <div class="mobile-dropdown-content">
+                <button class="mobile-dropdown-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="mobile-dropdown-menu">
+                    <div class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="service.html" class="nav-link">
+                            <i class="fas fa-cogs"></i>
+                            <span>Services</span>
+                        </a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Pages</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="appointment.html" class="dropdown-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Appointment</span>
+                            </a>
+                            <a href="feature.html" class="dropdown-item">
+                                <i class="fas fa-star"></i>
+                                <span>Features</span>
+                            </a>
+                            <a href="blog.html" class="dropdown-item">
+                                <i class="fas fa-blog"></i>
+                                <span>Our Blog</span>
+                            </a>
+                            <a href="team.html" class="dropdown-item">
+                                <i class="fas fa-users"></i>
+                                <span>Our Team</span>
+                            </a>
+                            <a href="testimonial.html" class="dropdown-item">
+                                <i class="fas fa-comments"></i>
+                                <span>Testimonial</span>
+                            </a>
+                            <a href="404.html" class="dropdown-item">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>404 Page</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <span style="vertical-align:middle; color:#E53935; font-size:1.5em;">
+                        <i class="fas fa-hospital"></i>
+                    </span>
+                    <span style="font-weight:bold; font-size:1.2em; margin-left:8px; color:#E53935;">Rumah Sakit Wisma Rini</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">
+                            <i class="fas fa-home me-2"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="nav-item nav-link">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="service.html" class="nav-item nav-link">
+                            <i class="fas fa-cogs me-2"></i>
+                            <span>Services</span>
+                        </a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                <i class="fas fa-file-alt me-2"></i>
+                                <span>Pages</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+                                <a href="appointment.html" class="dropdown-item">
+                                    <i class="fas fa-calendar-check me-2"></i>
+                                    <span>Appointment</span>
+                                </a>
+                                <a href="feature.html" class="dropdown-item">
+                                    <i class="fas fa-star me-2"></i>
+                                    <span>Features</span>
+                                </a>
+                                <a href="blog.html" class="dropdown-item">
+                                    <i class="fas fa-blog me-2"></i>
+                                    <span>Our Blog</span>
+                                </a>
+                                <a href="team.html" class="dropdown-item">
+                                    <i class="fas fa-users me-2"></i>
+                                    <span>Our Team</span>
+                                </a>
+                                <a href="testimonial.html" class="dropdown-item">
+                                    <i class="fas fa-comments me-2"></i>
+                                    <span>Testimonial</span>
+                                </a>
+                                <a href="404.html" class="dropdown-item">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <span>404 Page</span>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">
+                        <i class="fas fa-calendar-plus me-2"></i>
+                        <span>Book Appointment</span>
+                    </a>
+                </div>
+            </nav>
+
+
+            <!-- Carousel Start -->
+            <div class="header-carousel owl-carousel">
+                <div class="header-carousel-item">
+                    <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content p-3">
+                            <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Rumah Sakit Wisma Rini</h5>
+                            <h1 class="display-1 text-capitalize text-white mb-4">Melayani dengan Hati, Menyembuhkan dengan Ilmu</h1>
+                            <p class="mb-5 fs-5">Pusat layanan kesehatan modern dan terpercaya untuk keluarga Anda. Kami siap melayani 24 jam dengan dokter dan fasilitas terbaik.</p>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="appointment.html"><i class="fas fa-calendar-plus me-2"></i>Booking Dokter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-carousel-item">
+                    <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content p-3">
+                            <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Rumah Sakit Wisma Rini</h5>
+                            <h1 class="display-1 text-capitalize text-white mb-4">Layanan Poli Lengkap & Dokter Spesialis</h1>
+                            <p class="mb-5 fs-5 animated slideInDown">Kesehatan Anda prioritas kami. Tersedia poli umum, gigi, anak, kandungan, penyakit dalam, mata, dan lainnya.</p>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="appointment.html"><i class="fas fa-calendar-plus me-2"></i>Booking Dokter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Services Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0">Layanan Poli</h4>
+                    </div>
+                    <h1 class="display-3 mb-4">Layanan Poli Rumah Sakit Wisma Rini</h1>
+                    <p class="mb-0">Kami menyediakan berbagai layanan poli dengan dokter spesialis dan fasilitas modern untuk memenuhi kebutuhan kesehatan Anda dan keluarga.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded text-center py-5 px-3">
+                            <i class="fas fa-user-md fa-3x text-danger mb-3"></i>
+                            <h5 class="mb-3">Poli Umum</h5>
+                            <p>Pelayanan kesehatan umum untuk segala usia dengan dokter berpengalaman.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded text-center py-5 px-3">
+                            <i class="fas fa-tooth fa-3x text-danger mb-3"></i>
+                            <h5 class="mb-3">Poli Gigi</h5>
+                            <p>Perawatan gigi dan mulut, konsultasi, tambal, cabut, dan scaling.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded text-center py-5 px-3">
+                            <i class="fas fa-child fa-3x text-danger mb-3"></i>
+                            <h5 class="mb-3">Poli Anak</h5>
+                            <p>Pemeriksaan dan pengobatan khusus anak-anak oleh dokter spesialis anak.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded text-center py-5 px-3">
+                            <i class="fas fa-female fa-3x text-danger mb-3"></i>
+                            <h5 class="mb-3">Poli Kandungan</h5>
+                            <p>Pemeriksaan kehamilan, konsultasi kandungan, dan USG.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded text-center py-5 px-3">
+                            <i class="fas fa-heartbeat fa-3x text-danger mb-3"></i>
+                            <h5 class="mb-3">Poli Penyakit Dalam</h5>
+                            <p>Penanganan penyakit dalam oleh dokter spesialis penyakit dalam.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded text-center py-5 px-3">
+                            <i class="fas fa-eye fa-3x text-danger mb-3"></i>
+                            <h5 class="mb-3">Poli Mata</h5>
+                            <p>Pemeriksaan dan pengobatan gangguan mata serta konsultasi kacamata.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded text-center py-5 px-3">
+                            <i class="fas fa-lungs fa-3x text-danger mb-3"></i>
+                            <h5 class="mb-3">Poli Paru</h5>
+                            <p>Pemeriksaan dan penanganan gangguan paru serta konsultasi kesehatan pernapasan.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded text-center py-5 px-3">
+                            <i class="fas fa-brain fa-3x text-danger mb-3"></i>
+                            <h5 class="mb-3">Poli Syaraf</h5>
+                            <p>Konsultasi dan penanganan masalah syaraf oleh dokter spesialis syaraf.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services End -->
+
+
+        <!-- About Start -->
+        <div class="container-fluid about bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="about-img pb-5 ps-5 text-center">
+                            <img src="img/about-1.jpg" class="img-fluid rounded w-100" style="object-fit: cover;" alt="Image">
+                            <div class="about-img-inner">
+                                <img src="img/about-2.jpg" class="img-fluid rounded-circle w-100 h-100" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="section-title text-start mb-5">
+                            <h4 class="sub-title pe-3 mb-0">Tentang Kami</h4>
+                            <h1 class="display-3 mb-4">Profil Rumah Sakit Wisma Rini</h1>
+                            <p class="mb-4">Rumah Sakit Wisma Rini berdiri sejak tahun 2005 sebagai pusat layanan kesehatan modern di Kota Sejahtera. Kami berkomitmen memberikan pelayanan terbaik dengan tenaga medis profesional dan fasilitas lengkap.</p>
+                            <ul class="mb-4">
+                                <li><strong>Visi:</strong> Menjadi rumah sakit pilihan utama masyarakat dengan pelayanan unggul dan berorientasi pada keselamatan pasien.</li>
+                                <li><strong>Misi:</strong> Memberikan pelayanan kesehatan berkualitas, ramah, dan terjangkau untuk semua kalangan.</li>
+                            </ul>
+                            <div class="mb-4">
+                                <p class="text-secondary"><i class="fas fa-check text-danger me-2"></i> Dokter dan tenaga medis berpengalaman</p>
+                                <p class="text-secondary"><i class="fas fa-check text-danger me-2"></i> Fasilitas modern dan lengkap</p>
+                                <p class="text-secondary"><i class="fas fa-check text-danger me-2"></i> Layanan 24 jam</p>
+                                <p class="text-secondary"><i class="fas fa-check text-danger me-2"></i> Lokasi strategis dan mudah dijangkau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Feature Start -->
+        <div class="container-fluid feature py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0">Keunggulan Kami</h4>
+                    </div>
+                    <h1 class="display-3 mb-4">Mengapa Memilih Rumah Sakit Wisma Rini?</h1>
+                    <p class="mb-0">Kami berkomitmen memberikan pelayanan kesehatan terbaik dengan dokter spesialis, fasilitas modern, dan layanan ramah untuk seluruh keluarga Anda.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="row-cols-1 feature-item p-4">
+                            <div class="col-12">
+                                <div class="feature-icon mb-4">
+                                    <div class="p-3 d-inline-flex bg-white rounded">
+                                        <i class="fas fa-diagnoses fa-4x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-4">Dokter & Tenaga Medis Profesional</h5>
+                                    <p class="mb-0">Tim medis berpengalaman dan bersertifikat siap melayani Anda dengan sepenuh hati.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="row-cols-1 feature-item p-4">
+                            <div class="col-12">
+                                <div class="feature-icon mb-4">
+                                    <div class="p-3 d-inline-flex bg-white rounded">
+                                        <i class="fas fa-briefcase-medical fa-4x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-4">Fasilitas Modern & Lengkap</h5>
+                                    <p class="mb-0">Didukung peralatan medis terbaru dan ruang perawatan nyaman untuk pasien.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="row-cols-1 feature-item p-4">
+                            <div class="col-12">
+                                <div class="feature-icon mb-4">
+                                    <div class="p-3 d-inline-flex bg-white rounded">
+                                        <i class="fas fa-hospital-user fa-4x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-4">Pelayanan 24 Jam</h5>
+                                    <p class="mb-0">Kami siap melayani kebutuhan kesehatan Anda kapan saja, setiap hari.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="row-cols-1 feature-item p-4">
+                            <div class="col-12">
+                                <div class="feature-icon mb-4">
+                                    <div class="p-3 d-inline-flex bg-white rounded">
+                                        <i class="fas fa-users fa-4x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-4">Lokasi Strategis</h5>
+                                    <p class="mb-0">Rumah sakit mudah dijangkau dan berada di pusat Kota Sejahtera.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="row-cols-1 feature-item p-4">
+                            <div class="col-12">
+                                <div class="feature-icon mb-4">
+                                    <div class="p-3 d-inline-flex bg-white rounded">
+                                        <i class="fas fa-spa fa-4x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-4">Pendaftaran Online Mudah</h5>
+                                    <p class="mb-0">Booking dokter dan layanan bisa dilakukan secara online dengan cepat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="row-cols-1 feature-item p-4">
+                            <div class="col-12">
+                                <div class="feature-icon mb-4">
+                                    <div class="p-3 d-inline-flex bg-white rounded">
+                                        <i class="fas fa-heart fa-4x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-4">Harga Terjangkau</h5>
+                                    <p class="mb-0">Biaya layanan kompetitif dan transparan untuk semua kalangan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="row-cols-1 feature-item p-4">
+                            <div class="col-12">
+                                <div class="feature-icon mb-4">
+                                    <div class="p-3 d-inline-flex bg-white rounded">
+                                        <i class="fab fa-pied-piper fa-4x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-4">Ramah Anak & Lansia</h5>
+                                    <p class="mb-0">Fasilitas dan layanan kami ramah untuk anak-anak dan lansia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="row-cols-1 feature-item p-4">
+                            <div class="col-12">
+                                <div class="feature-icon mb-4">
+                                    <div class="p-3 d-inline-flex bg-white rounded">
+                                        <i class="fas fa-user-md fa-4x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-4">Kenyamanan & Privasi</h5>
+                                    <p class="mb-0">Kenyamanan dan privasi pasien adalah prioritas utama kami.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+
+        <!-- Book Appointment Start -->
+        <div class="container-fluid appointment py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
+                        <div class="section-title text-start">
+                            <h4 class="sub-title pe-3 mb-0">Layanan Unggulan Kami</h4>
+                            <h1 class="display-4 mb-4">Solusi Kesehatan Terbaik untuk Keluarga Anda</h1>
+                            <p class="mb-4">Rumah Sakit Wisma Rini menyediakan layanan kesehatan komprehensif dengan dokter spesialis, fasilitas modern, dan sistem pendaftaran online yang memudahkan pasien.</p>
+                            <div class="row g-4">
+                                <div class="col-sm-6">
+                                    <div class="d-flex flex-column h-100">
+                                        <div class="mb-4">
+                                            <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Poli Spesialis Lengkap</h5>
+                                            <p class="mb-0">Tersedia poli umum, gigi, anak, kandungan, penyakit dalam, mata, dan lainnya.</p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Pendaftaran Online Mudah</h5>
+                                            <p class="mb-0">Booking dokter dan layanan bisa dilakukan secara online, cepat dan praktis.</p>
+                                        </div>
+                                        <div class="text-start mb-4">
+                                            <a href="appointment.html" class="btn btn-primary rounded-pill text-white py-3 px-5">Booking Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="video h-100">
+                                        <img src="img/video-img.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
+                                        <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                                            <span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="appointment-form rounded p-5">
+                            <p class="fs-4 text-uppercase text-primary">Hubungi Kami</p>
+                            <h1 class="display-5 mb-4">Formulir Booking Dokter</h1>
+                            <form>
+                                <div class="row gy-3 gx-4">
+                                    <div class="col-xl-6">
+                                        <input type="text" class="form-control py-3 border-primary bg-transparent text-white" placeholder="Nama Lengkap">
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <input type="email" class="form-control py-3 border-primary bg-transparent text-white" placeholder="Email">
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <input type="phone" class="form-control py-3 border-primary bg-transparent" placeholder="No. Telepon">
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <select class="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
+                                            <option selected>Pilih Poli</option>
+                                            <option value="1">Poli Umum</option>
+                                            <option value="2">Poli Gigi</option>
+                                            <option value="3">Poli Anak</option>
+                                            <option value="4">Poli Kandungan</option>
+                                            <option value="5">Poli Penyakit Dalam</option>
+                                            <option value="6">Poli Mata</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <input type="date" class="form-control py-3 border-primary bg-transparent">
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <select class="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
+                                            <option selected>Pilih Jenis Kelamin</option>
+                                            <option value="1">Laki-laki</option>
+                                            <option value="2">Perempuan</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control border-primary bg-transparent text-white" name="text" id="area-text" cols="30" rows="5" placeholder="Keluhan atau pesan"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-primary text-white w-100 py-3 px-5"><i class="fas fa-paper-plane me-2"></i>Kirim Booking</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Video -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Book Appointment End -->
+
+
+        <!-- Team Start -->
+        <div class="container-fluid team py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0">Dokter Kami</h4>
+                    </div>
+                    <h1 class="display-3 mb-4">Tim Dokter Spesialis Rumah Sakit Wisma Rini</h1>
+                    <p class="mb-0">Berikut adalah beberapa dokter spesialis yang siap melayani Anda di Rumah Sakit Wisma Rini.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item rounded">
+                            <div class="team-img rounded-top h-100">
+                                <img src="img/team-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="team-icon d-flex justify-content-center">
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                                <h5>dr. Andi Sehat</h5>
+                                <p class="mb-0">Dokter Umum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item rounded">
+                            <div class="team-img rounded-top h-100">
+                                <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="team-icon d-flex justify-content-center">
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                                <h5>drg. Sari Gigi</h5>
+                                <p class="mb-0">Dokter Gigi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item rounded">
+                            <div class="team-img rounded-top h-100">
+                                <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="team-icon d-flex justify-content-center">
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                                <h5>dr. Budi Anak</h5>
+                                <p class="mb-0">Dokter Spesialis Anak</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item rounded">
+                            <div class="team-img rounded-top h-100">
+                                <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="team-icon d-flex justify-content-center">
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                                <h5>dr. Rini Kandungan</h5>
+                                <p class="mb-0">Dokter Spesialis Kandungan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title mb-5">
+                    <div class="sub-style">
+                        <h4 class="sub-title text-white px-3 mb-0">Testimoni Pasien</h4>
+                    </div>
+                    <h1 class="display-3 mb-4">Apa Kata Pasien Kami?</h1>
+                </div>
+                <div class="testimonial-carousel owl-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-inner p-5">
+                            <div class="testimonial-inner-img mb-4">
+                                <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <p class="text-white fs-7">"Pelayanan di RS Wisma Rini sangat ramah dan profesional. Fasilitasnya juga lengkap!"</p>
+                            <div class="text-center">
+                                <h5 class="mb-2">Ahmad</h5>
+                                <p class="mb-2 text-white-50">Karyawan Swasta</p>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-inner p-5">
+                            <div class="testimonial-inner-img mb-4">
+                                <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <p class="text-white fs-7">"Dokternya sangat sabar dan informatif. Anak saya jadi tidak takut berobat."</p>
+                            <div class="text-center">
+                                <h5 class="mb-2">Siti</h5>
+                                <p class="mb-2 text-white-50">Ibu Rumah Tangga</p>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-inner p-5">
+                            <div class="testimonial-inner-img mb-4">
+                                <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <p class="text-white fs-7">"Proses pendaftaran online sangat mudah dan cepat. Terima kasih RS Wisma Rini!"</p>
+                            <div class="text-center">
+                                <h5 class="mb-2">Budi</h5>
+                                <p class="mb-2 text-white-50">Wiraswasta</p>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Blog Start -->
+        <div class="container-fluid blog py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0">Berita</h4>
+                    </div>
+                    <h1 class="display-3 mb-4">Info & Berita Kesehatan Terkini</h1>
+                    <p class="mb-0">Dapatkan informasi terbaru seputar layanan, tips kesehatan, dan kegiatan di Rumah Sakit Wisma Rini.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-item rounded">
+                            <div class="blog-img">
+                                <img src="img/blog-1.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="blog-centent p-4">
+                                <div class="d-flex justify-content-between mb-4">
+                                    <p class="mb-0 text-muted"><i class="fas fa-calendar-alt text-primary"></i> 01 Jan 2045</p>
+                                    <a href="#" class="text-muted"><span class="fas fa-comments text-primary"></span> 3 Comments</a>
+                                </div>
+                                <a href="#" class="h4">Tips Menjaga Kesehatan di Musim Pancaroba</a>
+                                <p class="my-4">Musim pancaroba rentan penyakit. Simak tips menjaga daya tahan tubuh dari dokter RS Wisma Rini.</p>
+                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1"><i class="fas fa-arrow-right me-2"></i>Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="blog-item rounded">
+                            <div class="blog-img">
+                                <img src="img/blog-2.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="blog-centent p-4">
+                                <div class="d-flex justify-content-between mb-4">
+                                    <p class="mb-0 text-muted"><i class="fas fa-calendar-alt text-primary"></i> 01 Jan 2045</p>
+                                    <a href="#" class="text-muted"><span class="fas fa-comments text-primary"></span> 3 Comments</a>
+                                </div>
+                                <a href="#" class="h4">Layanan Poli Gigi Buka Setiap Sabtu</a>
+                                <p class="my-4">Kini poli gigi RS Wisma Rini buka setiap Sabtu untuk melayani kebutuhan kesehatan gigi Anda.</p>
+                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1"><i class="fas fa-arrow-right me-2"></i>Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="blog-item rounded">
+                            <div class="blog-img">
+                                <img src="img/blog-3.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="blog-centent p-4">
+                                <div class="d-flex justify-content-between mb-4">
+                                    <p class="mb-0 text-muted"><i class="fas fa-calendar-alt text-primary"></i> 01 Jan 2045</p>
+                                    <a href="#" class="text-muted"><span class="fas fa-comments text-primary"></span> 3 Comments</a>
+                                </div>
+                                <a href="#" class="h4">Pendaftaran Online, Mudah & Cepat</a>
+                                <p class="my-4">Manfaatkan fitur booking online untuk konsultasi dokter tanpa antri di RS Wisma Rini.</p>
+                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1"><i class="fas fa-arrow-right me-2"></i>Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn bg-danger" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4"><i class="fas fa-hospital me-3 text-white"></i>Rumah Sakit Wisma Rini</h4>
+                            <p>Rumah Sakit Wisma Rini adalah pusat layanan kesehatan modern dan terpercaya di Kota Sejahtera. Kami siap melayani Anda 24 jam dengan dokter dan fasilitas terbaik.</p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-light text-danger rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-light text-danger rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-light text-danger rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-light text-danger rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Informasi</h4>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Tentang Kami</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Layanan Poli</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Berita</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Booking Dokter</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Kontak</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Jam Operasional</h4>
+                            <a href="#"><i class="fas fa-clock me-2"></i> Senin - Minggu: 24 Jam</a>
+                            <a href="#"><i class="fas fa-calendar me-2"></i> Hari Libur: Tetap Buka</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Kontak Kami</h4>
+                            <a href="#"><i class="fas fa-map-marker-alt me-2"></i> Jl. Sehat Selalu No. 123, Kota Sejahtera</a>
+                            <a href="#"><i class="fas fa-envelope me-2"></i> info@rswismarini.com</a>
+                            <a href="#"><i class="fas fa-phone me-2"></i> (021) 12345678</a>
+                            <a href="#"><i class="fab fa-whatsapp me-2"></i> 0812-3456-7890</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Rumah Sakit Wisma Rini</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white">
+                        <i class="fas fa-code me-2"></i>Designed By <a class="border-bottom" href="#">Tim IT RS Wisma Rini</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fas fa-chevron-up"></i></a>   
+
+        <!-- Mobile Bottom Navigation -->
+        <div class="mobile-bottom-nav">
+            <div class="nav-item">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="service.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Services</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="appointment.html" class="nav-link">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Book</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-phone"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                    <span>Menu</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        
+        <!-- Mobile Menu JavaScript -->
+        <script>
+            function toggleMobileMenu() {
+                const mobileDropdown = document.getElementById('mobileDropdown');
+                mobileDropdown.classList.toggle('show');
+            }
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const mobileDropdown = document.getElementById('mobileDropdown');
+                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+                
+                if (!mobileDropdown.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    mobileDropdown.classList.remove('show');
+                }
+            });
+            
+            // Handle mobile dropdown menu
+            document.addEventListener('DOMContentLoaded', function() {
+                const dropdownToggles = document.querySelectorAll('.mobile-dropdown-menu .dropdown-toggle');
+                
+                dropdownToggles.forEach(toggle => {
+                    toggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const dropdownMenu = this.nextElementSibling;
+                        dropdownMenu.classList.toggle('show');
+                    });
+                });
+            });
+            
+            // Set active state for bottom navigation
+            function setActiveBottomNav() {
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const bottomNavLinks = document.querySelectorAll('.mobile-bottom-nav .nav-link');
+                
+                bottomNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Initialize mobile navigation
+            document.addEventListener('DOMContentLoaded', function() {
+                setActiveBottomNav();
+                
+                // Handle bottom navigation clicks
+                const bottomNavLinks = document.querySelectorAll('.mobile-bottom-nav .nav-link');
+                bottomNavLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        if (this.getAttribute('href') === '#') {
+                            e.preventDefault();
+                            return;
+                        }
+                        
+                        // Remove active class from all links
+                        bottomNavLinks.forEach(l => l.classList.remove('active'));
+                        // Add active class to clicked link
+                        this.classList.add('active');
+                    });
+                });
+            });
+        </script>
+        
+    </body>
+
+</html>

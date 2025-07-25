@@ -1,0 +1,14 @@
+D:/laragon/www/Biddokkes/app/
+├── Controllers/
+│   ├── Auth.php           ; Login/logout
+│   ├── Dashboard.php      ; Halaman utama per role
+├── Models/
+│   ├── UserModel.php
+│   ├── AuthModel.php
+│   ├── KategoriModel.php
+│   ├── BeritaModel.php
+│   ├── DownloadModel.php
+│   ├── SlideModel.php
+├── Views/
+│   ├── backend/
+│   ├── frontend/

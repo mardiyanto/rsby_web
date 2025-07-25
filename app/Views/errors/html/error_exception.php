@@ -1,429 +1,187 @@
-<?php
-use CodeIgniter\HTTP\Header;
-use CodeIgniter\CodeIgniter;
-
-$errorId = uniqid('error', true);
-?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Terjadi Kesalahan | Biddokkes POLRI</title>
 
-    <title><?= esc($title) ?></title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
-        <?= preg_replace('#[\r\n\t ]+#', ' ', file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'debug.css')) ?>
-    </style>
-
-    <script>
-        <?= file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'debug.js') ?>
-    </script>
-</head>
-<body onload="init()">
-
-    <!-- Header -->
-    <div class="header">
-        <div class="environment">
-            Displayed at <?= esc(date('H:i:sa')) ?> &mdash;
-            PHP: <?= esc(PHP_VERSION) ?>  &mdash;
-            CodeIgniter: <?= esc(CodeIgniter::CI_VERSION) ?> --
-            Environment: <?= ENVIRONMENT ?>
-        </div>
-        <div class="container">
-            <h1><?= esc($title), esc($exception->getCode() ? ' #' . $exception->getCode() : '') ?></h1>
-            <p>
-                <?= nl2br(esc($exception->getMessage())) ?>
-                <a href="https://www.duckduckgo.com/?q=<?= urlencode($title . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $exception->getMessage())) ?>"
-                   rel="noreferrer" target="_blank">search &rarr;</a>
-            </p>
-        </div>
-    </div>
-
-    <!-- Source -->
-    <div class="container">
-        <p><b><?= esc(clean_path($file)) ?></b> at line <b><?= esc($line) ?></b></p>
-
-        <?php if (is_file($file)) : ?>
-            <div class="source">
-                <?= static::highlightFile($file, $line, 15); ?>
-            </div>
-        <?php endif; ?>
-    </div>
-
-    <div class="container">
-        <?php
-        $last = $exception;
-
-        while ($prevException = $last->getPrevious()) {
-            $last = $prevException;
-            ?>
-
-    <pre>
-    Caused by:
-    <?= esc($prevException::class), esc($prevException->getCode() ? ' #' . $prevException->getCode() : '') ?>
-
-    <?= nl2br(esc($prevException->getMessage())) ?>
-    <a href="https://www.duckduckgo.com/?q=<?= urlencode($prevException::class . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $prevException->getMessage())) ?>"
-       rel="noreferrer" target="_blank">search &rarr;</a>
-    <?= esc(clean_path($prevException->getFile()) . ':' . $prevException->getLine()) ?>
-    </pre>
-
-        <?php
+        :root {
+            --primary-navy: #1e3a8a;
+            --secondary-navy: #1e40af;
+            --accent-blue: #3b82f6;
+            --light-blue: #60a5fa;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
         }
-        ?>
-    </div>
-
-    <?php if (defined('SHOW_DEBUG_BACKTRACE') && SHOW_DEBUG_BACKTRACE) : ?>
-    <div class="container">
-
-        <ul class="tabs" id="tabs">
-            <li><a href="#backtrace">Backtrace</a></li>
-            <li><a href="#server">Server</a></li>
-            <li><a href="#request">Request</a></li>
-            <li><a href="#response">Response</a></li>
-            <li><a href="#files">Files</a></li>
-            <li><a href="#memory">Memory</a></li>
-        </ul>
-
-        <div class="tab-content">
-
-            <!-- Backtrace -->
-            <div class="content" id="backtrace">
-
-                <ol class="trace">
-                <?php foreach ($trace as $index => $row) : ?>
-
-                    <li>
-                        <p>
-                            <!-- Trace info -->
-                            <?php if (isset($row['file']) && is_file($row['file'])) : ?>
-                                <?php
-                                if (isset($row['function']) && in_array($row['function'], ['include', 'include_once', 'require', 'require_once'], true)) {
-                                    echo esc($row['function'] . ' ' . clean_path($row['file']));
-                                } else {
-                                    echo esc(clean_path($row['file']) . ' : ' . $row['line']);
-                                }
-                                ?>
-                            <?php else: ?>
-                                {PHP internal code}
-                            <?php endif; ?>
-
-                            <!-- Class/Method -->
-                            <?php if (isset($row['class'])) : ?>
-                                &nbsp;&nbsp;&mdash;&nbsp;&nbsp;<?= esc($row['class'] . $row['type'] . $row['function']) ?>
-                                <?php if (! empty($row['args'])) : ?>
-                                    <?php $argsId = $errorId . 'args' . $index ?>
-                                    ( <a href="#" onclick="return toggle('<?= esc($argsId, 'attr') ?>');">arguments</a> )
-                                    <div class="args" id="<?= esc($argsId, 'attr') ?>">
-                                        <table cellspacing="0">
-
-                                        <?php
-                                        $params = null;
-                                        // Reflection by name is not available for closure function
-                                        if (! str_ends_with($row['function'], '}')) {
-                                            $mirror = isset($row['class']) ? new ReflectionMethod($row['class'], $row['function']) : new ReflectionFunction($row['function']);
-                                            $params = $mirror->getParameters();
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+        }
+        
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+        }
+        
+        .error-content {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        .error-icon {
+            font-size: 4rem;
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 1rem;
+        }
+        
+        .error-description {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .error-details {
+            background: var(--gray-100);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--gray-700);
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-navy), var(--accent-blue));
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+        }
+        
+        .btn-outline-primary {
+            border: 2px solid var(--primary-navy);
+            color: var(--primary-navy);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-primary:hover {
+            background: var(--primary-navy);
+            color: var(--white);
+            transform: translateY(-2px);
                                         }
 
-                                        foreach ($row['args'] as $key => $value) : ?>
-                                            <tr>
-                                                <td><code><?= esc(isset($params[$key]) ? '$' . $params[$key]->name : "#{$key}") ?></code></td>
-                                                <td><pre><?= esc(print_r($value, true)) ?></pre></td>
-                                            </tr>
-                                        <?php endforeach ?>
-
-                                        </table>
-                                    </div>
-                                <?php else : ?>
-                                    ()
-                                <?php endif; ?>
-                            <?php endif; ?>
-
-                            <?php if (! isset($row['class']) && isset($row['function'])) : ?>
-                                &nbsp;&nbsp;&mdash;&nbsp;&nbsp;    <?= esc($row['function']) ?>()
-                            <?php endif; ?>
-                        </p>
-
-                        <!-- Source? -->
-                        <?php if (isset($row['file']) && is_file($row['file']) && isset($row['class'])) : ?>
-                            <div class="source">
-                                <?= static::highlightFile($row['file'], $row['line']) ?>
-                            </div>
-                        <?php endif; ?>
-                    </li>
-
-                <?php endforeach; ?>
-                </ol>
-
+        @media (max-width: 768px) {
+            .error-content {
+                padding: 2rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content" data-aos="zoom-in">
+            <div class="error-icon">
+                <i class="fas fa-exclamation-circle"></i>
             </div>
 
-            <!-- Server -->
-            <div class="content" id="server">
-                <?php foreach (['_SERVER', '_SESSION'] as $var) : ?>
-                    <?php
-                    if (empty($GLOBALS[$var]) || ! is_array($GLOBALS[$var])) {
-                        continue;
-                    } ?>
-
-                    <h3>$<?= esc($var) ?></h3>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Key</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($GLOBALS[$var] as $key => $value) : ?>
-                            <tr>
-                                <td><?= esc($key) ?></td>
-                                <td>
-                                    <?php if (is_string($value)) : ?>
-                                        <?= esc($value) ?>
-                                    <?php else: ?>
-                                        <pre><?= esc(print_r($value, true)) ?></pre>
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
-
-                <?php endforeach ?>
-
-                <!-- Constants -->
-                <?php $constants = get_defined_constants(true); ?>
-                <?php if (! empty($constants['user'])) : ?>
-                    <h3>Constants</h3>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Key</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($constants['user'] as $key => $value) : ?>
-                            <tr>
-                                <td><?= esc($key) ?></td>
-                                <td>
-                                    <?php if (is_string($value)) : ?>
-                                        <?= esc($value) ?>
-                                    <?php else: ?>
-                                        <pre><?= esc(print_r($value, true)) ?></pre>
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                <?php endif; ?>
+            <h1 class="error-title">Terjadi Kesalahan</h1>
+            
+            <p class="error-description">
+                Maaf, terjadi kesalahan dalam sistem. Tim kami sedang bekerja untuk memperbaiki masalah ini.
+                Silakan coba lagi beberapa saat kemudian.
+            </p>
+            
+            <?php if (ENVIRONMENT === 'development'): ?>
+            <div class="error-details">
+                <strong>Error:</strong> <?= $message ?? 'Unknown error' ?><br>
+                <strong>File:</strong> <?= $file ?? 'Unknown file' ?><br>
+                <strong>Line:</strong> <?= $line ?? 'Unknown line' ?>
             </div>
-
-            <!-- Request -->
-            <div class="content" id="request">
-                <?php $request = service('request'); ?>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td style="width: 10em">Path</td>
-                            <td><?= esc($request->getUri()) ?></td>
-                        </tr>
-                        <tr>
-                            <td>HTTP Method</td>
-                            <td><?= esc($request->getMethod()) ?></td>
-                        </tr>
-                        <tr>
-                            <td>IP Address</td>
-                            <td><?= esc($request->getIPAddress()) ?></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 10em">Is AJAX Request?</td>
-                            <td><?= $request->isAJAX() ? 'yes' : 'no' ?></td>
-                        </tr>
-                        <tr>
-                            <td>Is CLI Request?</td>
-                            <td><?= $request->isCLI() ? 'yes' : 'no' ?></td>
-                        </tr>
-                        <tr>
-                            <td>Is Secure Request?</td>
-                            <td><?= $request->isSecure() ? 'yes' : 'no' ?></td>
-                        </tr>
-                        <tr>
-                            <td>User Agent</td>
-                            <td><?= esc($request->getUserAgent()->getAgentString()) ?></td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-
-                <?php $empty = true; ?>
-                <?php foreach (['_GET', '_POST', '_COOKIE'] as $var) : ?>
-                    <?php
-                    if (empty($GLOBALS[$var]) || ! is_array($GLOBALS[$var])) {
-                        continue;
-                    } ?>
-
-                    <?php $empty = false; ?>
-
-                    <h3>$<?= esc($var) ?></h3>
-
-                    <table style="width: 100%">
-                        <thead>
-                            <tr>
-                                <th>Key</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($GLOBALS[$var] as $key => $value) : ?>
-                            <tr>
-                                <td><?= esc($key) ?></td>
-                                <td>
-                                    <?php if (is_string($value)) : ?>
-                                        <?= esc($value) ?>
-                                    <?php else: ?>
-                                        <pre><?= esc(print_r($value, true)) ?></pre>
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
-
-                <?php endforeach ?>
-
-                <?php if ($empty) : ?>
-
-                    <div class="alert">
-                        No $_GET, $_POST, or $_COOKIE Information to show.
-                    </div>
-
                 <?php endif; ?>
 
-                <?php $headers = $request->headers(); ?>
-                <?php if (! empty($headers)) : ?>
-
-                    <h3>Headers</h3>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Header</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($headers as $name => $value) : ?>
-                            <tr>
-                                <td><?= esc($name, 'html') ?></td>
-                                <td>
-                                <?php
-                                if ($value instanceof Header) {
-                                    echo esc($value->getValueLine(), 'html');
-                                } else {
-                                    foreach ($value as $i => $header) {
-                                        echo ' ('. $i+1 . ') ' . esc($header->getValueLine(), 'html');
-                                    }
-                                }
-                                ?>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
-
-                <?php endif; ?>
+            <div class="error-actions">
+                <a href="<?= base_url() ?>" class="btn btn-primary">
+                    <i class="fas fa-home me-2"></i>Kembali ke Beranda
+                </a>
+                <a href="<?= base_url('contact') ?>" class="btn btn-outline-primary">
+                    <i class="fas fa-envelope me-2"></i>Hubungi Kami
+                </a>
+            </div>
+            </div>
             </div>
 
-            <!-- Response -->
-            <?php
-                $response = service('response');
-                $response->setStatusCode(http_response_code());
-            ?>
-            <div class="content" id="response">
-                <table>
-                    <tr>
-                        <td style="width: 15em">Response Status</td>
-                        <td><?= esc($response->getStatusCode() . ' - ' . $response->getReasonPhrase()) ?></td>
-                    </tr>
-                </table>
-
-                <?php $headers = $response->headers(); ?>
-                <?php if (! empty($headers)) : ?>
-                    <h3>Headers</h3>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Header</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($headers as $name => $value) : ?>
-                            <tr>
-                                <td><?= esc($name, 'html') ?></td>
-                                <td>
-                                <?php
-                                if ($value instanceof Header) {
-                                    echo esc($response->getHeaderLine($name), 'html');
-                                } else {
-                                    foreach ($value as $i => $header) {
-                                        echo ' ('. $i+1 . ') ' . esc($header->getValueLine(), 'html');
-                                    }
-                                }
-                                ?>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
-
-                <?php endif; ?>
-            </div>
-
-            <!-- Files -->
-            <div class="content" id="files">
-                <?php $files = get_included_files(); ?>
-
-                <ol>
-                <?php foreach ($files as $file) :?>
-                    <li><?= esc(clean_path($file)) ?></li>
-                <?php endforeach ?>
-                </ol>
-            </div>
-
-            <!-- Memory -->
-            <div class="content" id="memory">
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Memory Usage</td>
-                            <td><?= esc(static::describeMemory(memory_get_usage(true))) ?></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 12em">Peak Memory Usage:</td>
-                            <td><?= esc(static::describeMemory(memory_get_peak_usage(true))) ?></td>
-                        </tr>
-                        <tr>
-                            <td>Memory Limit:</td>
-                            <td><?= esc(ini_get('memory_limit')) ?></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-
-        </div>  <!-- /tab-content -->
-
-    </div> <!-- /container -->
-    <?php endif; ?>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
 </body>
 </html>

@@ -1,7 +1,10 @@
-<?php
+ERROR: 404
 
-use CodeIgniter\CLI\CLI;
+<?= $message ?? 'Page Not Found' ?>
 
-CLI::error('ERROR: ' . $code);
-CLI::write($message);
-CLI::newLine();
+The page you requested was not found.
+
+<?php if (ENVIRONMENT === 'development'): ?>
+File: <?= $file ?? 'Unknown' ?>
+Line: <?= $line ?? 'Unknown' ?>
+<?php endif; ?>
